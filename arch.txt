@@ -1,0 +1,37 @@
+src/
+├── api/               # Файлы для работы с API
+│   └── productsApi.ts # Обёртка для работы с API продуктов
+├── components/        # Переиспользуемые компоненты (Card, Button, Loader и т.д.)
+│   ├── Card/
+│   │   ├── Card.tsx
+│   │   └── Card.module.css
+│   └── Header/
+│       ├── Header.tsx
+│       └── Header.module.css
+├── features/          # Логика, связанная с продуктами (Redux slices, Zustand stores)
+│   └── products/
+│       ├── productsSlice.ts # Redux Slice или Zustand Store
+│       ├── selectors.ts     # Селекторы
+│       ├── types.ts         # Типы данных, используемые в этом модуле
+│       └── thunks.ts        # Асинхронные экшены (если используем Redux Toolkit)
+├── hooks/             # Кастомные хуки
+│   └── useProducts.ts # Хуки для работы с продуктами
+├── pages/             # Страницы приложения
+│   ├── Products/
+│   │   ├── Products.tsx
+│   │   └── Products.module.css
+│   ├── ProductDetails/
+│   │   ├── ProductDetails.tsx
+│   │   └── ProductDetails.module.css
+│   └── CreateProduct/
+│       ├── CreateProduct.tsx
+│       └── CreateProduct.module.css
+├── store/             # Глобальное состояние приложения
+│   ├── index.ts       # Настройка Redux Store или Zustand Store
+│   └── rootReducer.ts # Главный редьюсер (если используем Redux)
+├── styles/            # Глобальные стили
+│   └── index.css
+├── App.tsx            # Корневой компонент
+├── index.tsx          # Точка входа
+└── types/             # Глобальные типы
+    └── product.ts     # Типы продуктов

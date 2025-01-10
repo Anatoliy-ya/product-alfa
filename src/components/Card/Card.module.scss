@@ -1,0 +1,106 @@
+.card {
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #253959;
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  h3 {
+    margin: 10px 0;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.likeButton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+
+  &:hover {
+    background-color: #d7d7d7;
+  }
+}
+
+.removeButton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+
+  &:hover {
+    background-color: #e65e5e;
+  }
+}
+
+.removeButton:hover {
+  background-color: #e65e5e;
+}
+
+.editButton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 10px;
+
+  &:hover {
+    background-color: #d7d7d7;
+  }
+}
+
+button[data-tooltip]::after {
+  content: attr(data-tooltip); /* Содержимое подсказки из атрибута */
+  position: absolute;
+  bottom: 120%; /* Расположите над кнопкой */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+button[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.rating {
+  position: absolute;
+  bottom: 2%;
+  left: 4%;
+}

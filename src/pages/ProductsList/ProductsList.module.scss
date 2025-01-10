@@ -1,0 +1,77 @@
+.productsListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  width: 100%;
+  height: 850px;
+  border: 2px solid #9b0101;
+  border-radius: 10px;
+  position: relative;
+
+  h1 {
+    color: #ffffff;
+  }
+}
+
+.searchInput {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  width: 300px !important;
+}
+
+.productsList {
+  display: grid;
+  width: 1000px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem;
+  position: relative;
+}
+
+.showLikedButton {
+  position: absolute;
+  height: 40px;
+  top: 70px;
+  right: 30px;
+  padding: 10px 10px;
+  background-color: #9b0101;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d7d7d7;
+  }
+}
+
+.showCreatedButton {
+  position: absolute;
+  height: 40px;
+  top: 70px;
+  left: 30px;
+  padding: 10px 10px;
+  background-color: #9b0101;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d7d7d7;
+  }
+}
+
+.loading,
+.error {
+  margin: auto;
+}
+
+.paginationContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 35%;
+}

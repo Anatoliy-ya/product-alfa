@@ -1,0 +1,15 @@
+{
+  "files": [],
+  "include": [
+    "src",
+    "react-rating-stars-component.d.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
