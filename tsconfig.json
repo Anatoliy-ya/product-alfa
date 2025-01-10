@@ -1,7 +1,6 @@
 {
   "files": [],
   "include": [
-    "src",
     "react-rating-stars-component.d.ts"
   ],
   "references": [
