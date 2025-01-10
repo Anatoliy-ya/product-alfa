@@ -11,3 +11,10 @@ export interface Product {
     count: number;
   };
 }
+
+export interface ProductsState {
+  items: Product[];
+  favorites: string[]; // Список ID избранных продуктов
+  loading: boolean;
+  error: string | null;
+}

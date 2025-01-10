@@ -1,15 +1,9 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { Product } from './types';
+import { Product, ProductsState } from './types';
 import { fetchProducts } from '../../api/productsApi';
 import { RootState } from '../../store';
 
 // Тип состояния
-interface ProductsState {
-  items: Product[];
-  favorites: string[]; // Список ID избранных продуктов
-  loading: boolean;
-  error: string | null;
-}
 
 const initialState: ProductsState = {
   items: JSON.parse(localStorage.getItem('products') || '[]'),
