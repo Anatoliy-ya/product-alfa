@@ -16,7 +16,7 @@ interface ProductsListProps {
 const ProductsList: React.FC<ProductsListProps> = ({ handleIsLiked }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
-  const { items, favorites } = useSelector((state: RootState) => state.products);
+  const { items, loading, favorites } = useSelector((state: RootState) => state.products);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [productIsLiked, setProductIsLiked] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -52,6 +52,10 @@ const ProductsList: React.FC<ProductsListProps> = ({ handleIsLiked }) => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.productsListContainer}>
