@@ -16,11 +16,11 @@ function App() {
     dispatch(toggleFavorite(id));
   };
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/product-alfa" element={<ProductsList handleIsLiked={handleIsLiked} />} />
+          <Route path="/" element={<ProductsList handleIsLiked={handleIsLiked} />} />
           <Route path="/products/:id" element={<Product handleIsLiked={handleIsLiked} />} />
           <Route path="/create-product" element={<CreateProduct />} />
           <Route path="/edit-product/:id" element={<EditProduct />} />
