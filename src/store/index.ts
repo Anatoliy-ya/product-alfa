@@ -1,7 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import productsReducer from '../features/products/productsSlice';
+import { ProductsState } from '../features/products/types';
 
-const store = configureStore({
+interface RootReducer {
+  products: ProductsState;
+}
+
+const store = configureStore<RootReducer>({
   reducer: {
     products: productsReducer,
   },
